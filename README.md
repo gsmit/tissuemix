@@ -1,2 +1,2 @@
-# tissuemix
-Augmentation for semantic segmentation in histopathology images via cutting and pasting.
+# TissueMix
+TissueMix is a remarkably simple cutting and pasting augmentation technique designed explicitly for semantic segmentation tasks using digitized histopathology images. Its underlying idea is to synthetically increase the size of small histopathology datasets by re-using existing annotated tissue patches to craft new unseen compositions. This is done by cutting out a target object from image $A$, applying a variety of augmentations, and pasting it into a different background image $B$.
