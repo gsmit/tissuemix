@@ -7,7 +7,6 @@ To apply TissueMix on two images, simply copy this repo and run the following sn
 
 ```python
 import tissuemix as tm
-import matplotlib.pyplot as plt
 
 # load target patches
 target = tm.load_image(f'../images/targets/target_03.png')
