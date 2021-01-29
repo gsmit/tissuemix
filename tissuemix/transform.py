@@ -39,9 +39,6 @@ def warp(image, mask, p=1.0):
         # shift, scale, and rotate
         albu.ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.1, rotate_limit=360, border_mode=0, value=0, p=1.0),
 
-        # sharpen transformed image
-        # albu.IAASharpen(alpha=(0.1, 0.4), lightness=(0.2, 0.5), p=0.5)
-
     ])
 
     # apply transformations

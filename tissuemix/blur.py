@@ -4,8 +4,7 @@ import scipy.sparse
 import PIL.Image
 import pyamg
 
-# suppress future warnings
-import warnings
+import warnings  # to suppress future warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
@@ -17,7 +16,7 @@ def gaussian_blur(target, target_mask, background, blur_factor=5):
     return np.array(background)
 
 
-# pre-process the mask array so that uint64 types from opencv.imread can be adapted
+# poisson blending adopted from: https://github.com/parosky/poissonblending
 def prepare_mask(mask):
     if type(mask[0][0]) is np.ndarray:
         result = np.ndarray((mask.shape[0], mask.shape[1]), dtype=np.uint8)
